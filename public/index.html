@@ -1,0 +1,59 @@
+<html>
+<head>
+<base href="/">
+<title>helpdesk</title>
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<meta property="og:image" content="conversation.svg" />
+<meta property="og:title" content="Food Coach" />
+<meta property="og:description"
+  content="A simple sample web application demonstrating the integration of Watson Tone Analyzer into Watson Conversation." />
+<link rel="shortcut icon" href="favicon.ico" type="image/x-icon">
+<link rel="stylesheet" href="css/app.css">
+<link href="https://afeld.github.io/emoji-css/emoji.css"
+  rel="stylesheet">
+</head>
+<body>
+  <div id="view-change-button" class="button"
+    onclick="PayloadPanel.togglePanel(event, this)">
+    <img class="option full" src="../img/Chat Button.png"> <img
+      class="option not-full" src="../img/Code Button.png">
+  </div>
+  <div id="contentParent" class="responsive-columns-wrapper">
+    <div id="chat-column-holder"
+      class="responsive-column content-column">
+      <div class="chat-column">
+        <img src="data:image/png;base64,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" alt="" width="150" height="100" />
+        <div id="scrollingChat"></div>
+        <label for="textInput" class="inputOutline"> <input
+          id="textInput" class="input responsive-column"
+          placeholder="Type something (for suggestions, type 'help')."
+          type="text"
+          onkeydown="ConversationPanel.inputKeyDown(event, this)">
+        </label>
+      </div>
+    </div>
+    <div id="payload-column" class="fixed-column content-column">
+      <div id="payload-initial-message">Type something to see the
+        output</div>
+      <div id="payload-request" class="payload"></div>
+      <div id="payload-response" class="payload"></div>
+    </div>
+  </div>
+
+  <script type="text/javascript">
+    (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+    (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+    m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+    })(window,document,'script','//www.google-analytics.com/analytics.js','ga');
+    ga('create', 'UA-59827755-8', 'auto');
+    ga('send', 'pageview');
+  </script>
+
+  <script src="js/common.js"></script>
+  <script src="js/api.js"></script>
+  <script src="js/conversation.js"></script>
+  <script src="js/payload.js"></script>
+  <script src="js/global.js"></script>
+</body>
+</html>
